@@ -5,11 +5,41 @@ permalink: /teaching/
 author_profile: true
 ---
 
-I have taught undergraduate-level classes at Virginia Tech in lecture-style and active-learning-style mode. These include programming classes in C/C++ (CS 1044), Java (CS 1054), and Software Design (CS 1114). For the past three years, I have been a teaching assistant in Introduction to Computational Thinking (CS 1014), which is aimed at non-computing majors and contextualized around examining the societal impact of data. I will be the instructor of record for this class in Spring 2021.  
+<p style="margin-bottom: 1.5em; line-height: 1.7;">
+The same questions that animate my research show up in the classroom: who gets to decide what counts as knowledge, how we reckon with the politics of the tools we build, what it means to work responsibly alongside communities. I see teaching as another site where these commitments take shape and can grow.
+</p>
 
+<h2 style="font-size: 1.1em; margin-top: 2em; margin-bottom: 0.75em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4em;">University of Pittsburgh</h2>
+
+<p style="margin-bottom: 1.5em; font-size: 0.9em; color: #6b7280; line-height: 1.6;">
+Courses in Information Culture and Data Stewardship (ICDS) and Computer Science (CS).
+</p>
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
+{% assign pitt_courses = site.teaching | where_exp: "item", "item.venue contains 'Pittsburgh'" | sort: 'date' | reverse %}
+{% for post in pitt_courses %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<h2 style="font-size: 1.1em; margin-top: 2.5em; margin-bottom: 0.75em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4em;">San Francisco State University</h2>
+
+<p style="margin-bottom: 1.5em; font-size: 0.9em; color: #6b7280; line-height: 1.6;">
+Courses in Computer Science.
+</p>
+
+{% assign sfsu_courses = site.teaching | where_exp: "item", "item.venue contains 'San Francisco'" | sort: 'date' | reverse %}
+{% for post in sfsu_courses %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<h2 style="font-size: 1.1em; margin-top: 2.5em; margin-bottom: 0.75em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4em;">Virginia Tech</h2>
+
+<p style="margin-bottom: 1.5em; font-size: 0.9em; color: #6b7280; line-height: 1.6;">
+Courses in Computer Science.
+</p>
+
+{% assign vt_courses = site.teaching | where_exp: "item", "item.venue contains 'Virginia Tech'" | sort: 'date' | reverse %}
+{% for post in vt_courses %}
   {% include archive-single.html %}
 {% endfor %}
