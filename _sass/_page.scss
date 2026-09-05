@@ -411,6 +411,194 @@
 
 
 /* ==========================================================================
+   PUBLICATIONS PAGE
+   ========================================================================== */
+
+.pub-note {
+  font-size: 0.85em;
+  color: $gray;
+  margin-bottom: 2.5em;
+  font-family: $sans-serif;
+  a { color: $link-color; }
+}
+
+.pub-year-group {
+  margin-bottom: 2.5em;
+}
+
+.pub-year-heading {
+  font-size: 0.8em;
+  font-weight: 600;
+  font-family: $sans-serif;
+  letter-spacing: 0.1em;
+  color: $gray;
+  text-transform: uppercase;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+}
+
+.pub-item {
+  margin-bottom: 1.75em;
+  padding-bottom: 1.75em;
+  border-bottom: 1px solid $lighter-gray;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.pub-venue-tag {
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  font-weight: 500;
+  color: $gray;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+
+.pub-title {
+  font-size: 0.97em;
+  font-weight: 500;
+  font-family: $sans-serif;
+  line-height: 1.45;
+  margin: 0.2em 0 0.35em;
+
+  a {
+    color: $darker-gray;
+    text-decoration: none;
+    border-bottom: 1px solid $border-color;
+
+    &:hover {
+      border-bottom-color: $primary-color;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.pub-authors {
+  font-size: 0.8em;
+  color: $gray;
+  font-family: $sans-serif;
+  margin-bottom: 0.6em;
+  line-height: 1.5;
+}
+
+.pub-summary {
+  font-size: 0.91em;
+  color: $dark-gray;
+  line-height: 1.7;
+  margin: 0.4em 0 0.7em;
+  font-family: $sans-serif;
+}
+
+.pub-links {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 0.6em;
+}
+
+.pub-link {
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 3px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &.pub-link-pdf {
+    background: $lighter-gray;
+    color: $dark-gray;
+    border: 1px solid $light-gray;
+
+    &:hover {
+      background: $primary-color;
+      color: #fff;
+      border-color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  &.pub-link-doi {
+    background: transparent;
+    color: $primary-color;
+    border: 1px solid rgba(74, 103, 65, 0.35);
+
+    &:hover {
+      background: $primary-color;
+      color: #fff;
+      border-color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.pub-abstract {
+  margin-top: 0.4em;
+
+  summary {
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $gray;
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    transition: color 0.15s ease;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::before {
+      content: "+";
+      font-size: 1.1em;
+      font-weight: 400;
+      display: inline-block;
+    }
+
+    &:hover { color: $primary-color; }
+  }
+
+  &[open] summary {
+    color: $primary-color;
+    &::before { content: "\2212"; }
+  }
+
+  .pub-abstract-body {
+    margin-top: 0.75em;
+    padding: 0.9em 1.1em;
+    background: $lighter-gray;
+    border-left: 2px solid $light-gray;
+    font-size: 0.86em;
+    line-height: 1.75;
+    color: $dark-gray;
+    font-family: $sans-serif;
+
+    p { margin-bottom: 0.5em; }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(61, 110, 78, 0.3);
+      &:hover { border-bottom-color: $link-color; }
+    }
+  }
+}
+
+
+/* ==========================================================================
    HOMEPAGE - INTERDEPENDENCE THEME
    ========================================================================== */
 

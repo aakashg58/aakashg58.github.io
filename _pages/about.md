@@ -48,9 +48,8 @@ My research brings together participatory design, qualitative inquiry, and syste
 
 ## Working together
 
-I hold dual appointments in Information Culture and Data Stewardship (ICDS) and Computer Science (CS). Previously, I was on the faculty at [San Francisco State University](https://cs.sfsu.edu/). I completed my Ph.D. at [Virginia Tech](https://vt.edu/), where my dissertation received the SIGCHI Outstanding Dissertation Award.
 
-**Prospective students**: I actively seek undergraduate and graduate students interested in participatory design, community-centered technology, or learning environments. If you are at Pitt, let's talk. If considering graduate studies, reach out before applying.
+**Prospective students**: I actively seek undergraduate and graduate students interested in participatory design, community-centered technology, or learning environments. If you are at Pitt, let's talk. I hold dual appointments in Information Culture and Data Stewardship (ICDS) and Computer Science (CS) so if considering graduate studies in Library and Information Science (LIS) or Computer Science (CS), reach out before applying.
 
 **Collaborators and partners**: I welcome conversations with community organizations, public institutions, and researchers working on related questions.
 

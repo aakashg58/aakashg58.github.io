@@ -1,0 +1,51 @@
+---
+layout: single
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<p class="pub-note">* denotes shared first authorship. Full list on <a href="https://scholar.google.com/citations?user=b3DcFdsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+{% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+{% assign prev_year = "" %}
+
+{% for pub in sorted_pubs %}
+  {% assign pub_year = pub.date | date: "%Y" %}
+  {% if pub_year != prev_year %}
+    {% if prev_year != "" %}</div>{% endif %}
+    <div class="pub-year-group">
+    <h2 class="pub-year-heading">{{ pub_year }}</h2>
+    {% assign prev_year = pub_year %}
+  {% endif %}
+
+  <div class="pub-item">
+    <div class="pub-venue-tag">{{ pub.venue }}</div>
+    <div class="pub-title">
+      {% if pub.localfile %}<a href="{{ pub.localfile }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {% elsif pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {% else %}{{ pub.title }}{% endif %}
+    </div>
+    {% if pub.authors %}
+    <div class="pub-authors">{{ pub.authors }}</div>
+    {% endif %}
+    {% if pub.summary %}
+    <p class="pub-summary">{{ pub.summary }}</p>
+    {% endif %}
+    {% if pub.localfile or pub.doi %}
+    <div class="pub-links">
+      {% if pub.localfile %}<a href="{{ pub.localfile }}" class="pub-link pub-link-pdf" target="_blank">PDF</a>{% endif %}
+      {% if pub.doi %}<a href="{{ pub.doi }}" class="pub-link pub-link-doi" target="_blank" rel="noopener">DOI</a>{% endif %}
+    </div>
+    {% endif %}
+    {% assign stripped = pub.content | strip %}
+    {% if stripped != "" %}
+    <details class="pub-abstract">
+      <summary>Abstract</summary>
+      <div class="pub-abstract-body">{{ pub.content }}</div>
+    </details>
+    {% endif %}
+  </div>
+
+{% endfor %}
+</div>
